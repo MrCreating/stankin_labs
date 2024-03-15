@@ -29,9 +29,10 @@
             android:layout_height="wrap_content"
             tools:text="Время" />
     </LinearLayout>
-    <ImageView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@null"
-        android:src="@android:drawable/ic_menu_edit" />
+        android:id="@+id/delete_event"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
 </LinearLayout>

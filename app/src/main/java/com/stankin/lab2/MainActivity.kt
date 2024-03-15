@@ -37,6 +37,6 @@ class MainActivity : AppCompatActivity(), DialogFragment.OnEventAddedListener {
 
     override fun onEventAdded(event: CalendarEventItem) {
         eventsList.add(event)
-        adapter.addEvent(event)
+        adapter.addEvent()
     }
 }
