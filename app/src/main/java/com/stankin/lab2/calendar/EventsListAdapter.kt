@@ -9,11 +9,12 @@ import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.stankin.lab2.R
 
-class EventsListAdapter(private val events: MutableList<CalendarEventItem>) : RecyclerView.Adapter<EventListHolder>() {
+class EventsListAdapter(private val events: MutableList<CalendarEventItem>, private val onItemClicked: (position: Int) -> Unit) : RecyclerView.Adapter<EventListHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventListHolder {
         return EventListHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.calendar_item, parent, false)
+                .inflate(R.layout.calendar_item, parent, false),
+            onItemClicked
         )
     }
 
